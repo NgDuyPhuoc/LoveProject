@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import SectionHome from "./components/SectionHome";
+import SectionGallery from "./components/SectionGallery";
+import SectionEnding from "./components/SectionEnding";
+import LoginPage from "./pages/LoginPage";
+import "./App.css";
 
 function App() {
+  const [authenticated, setAuthenticated] = useState(false);
+
+  if (!authenticated) {
+    return <LoginPage onLoginSuccess={() => setAuthenticated(true)} />;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div id="home">
+        <SectionHome />
+      </div>
+      <div id="gallery">
+        <SectionGallery />
+      </div>
+      <div id="ending">
+        <SectionEnding />
+      </div>
     </div>
   );
 }
