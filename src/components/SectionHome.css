@@ -1,5 +1,6 @@
 .section {
     min-height: 100vh;
+<<<<<<< HEAD
     padding: 120px 20px 80px 20px;
     text-align: center;
     font-family: "Poppins", sans-serif;
@@ -8,10 +9,14 @@
 
 .home-section {
     color: white;
+=======
+    padding: 60px 20px;
+>>>>>>> a51b743 (update)
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
 }
 
 .home-section h1 {
@@ -25,4 +30,110 @@
     line-height: 1.6;
     max-width: 600px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+=======
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Lớp overlay mờ trên background */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* mờ và tối background */
+    backdrop-filter: blur(4px);
+    z-index: 0;
+}
+
+.card {
+    width: 500px;
+    max-width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    display: block;
+}
+
+.text-content {
+    position: relative;
+    z-index: 1;
+}
+
+.text-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-family: "Dancing Script", cursive;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-days {
+    font-size: 2rem;
+    /* to hơn */
+    font-weight: 700;
+    /* đậm */
+    color: #ffb6c1;
+    /* hồng nhạt */
+    text-shadow: 0 0 5px rgba(255, 182, 193, 0.5);
+    /* tạo hiệu ứng nổi */
+}
+
+
+/* Animation fade-in nhẹ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+.text-content {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .text-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+>>>>>>> a51b743 (update)
 }

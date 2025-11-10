@@ -1,0 +1,94 @@
+.gallery-detail {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Ảnh và video */
+.gallery-detail img,
+.gallery-detail video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-detail img:hover,
+.gallery-detail video:hover {
+    transform: scale(1.03);
+}
+
+/* Lời nhắn */
+.gallery-detail p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* Nút quay lại */
+.back-btn {
+    background-color: pink;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #ffb6c1;
+    transform: scale(1.05);
+}
+
+/* --- Hiệu ứng mờ dần khi vào --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsive --- */
+
+/* Màn hình nhỏ (điện thoại) */
+@media (max-width: 600px) {
+    .gallery-detail {
+        padding: 20px 10px;
+    }
+
+    .gallery-detail img,
+    .gallery-detail video {
+        width: 80%;
+        max-width: 100%;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    .gallery-detail p {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Màn hình lớn (tablet trở lên) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .gallery-detail img,
+    .gallery-detail video {
+        max-width: 80%;
+    }
+}
