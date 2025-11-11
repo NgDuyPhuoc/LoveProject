@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-import "./SectionGallery.css";
-
-function SectionGallery() {
-    return (
-        <section id="gallery" className="section gallery-section">
-            <h2>📷 Những kỷ niệm đáng nhớ</h2>
-            <div className="gallery">
-                <img src="/love1.jpg" alt="Memory 1" />
-                <img src="/love2.jpg" alt="Memory 2" />
-                <img src="/love3.jpg" alt="Memory 3" />
-            </div>
-            <p>
-                Mỗi bức ảnh là một kỷ niệm, một câu chuyện, và là bằng chứng cho tình
-                yêu của chúng ta 💑
-=======
 import { useNavigate } from "react-router-dom";
 import "./SectionGallery.css";
-import noel from "../assets/noel-kyniem.jpg"
+import noel from "../assets/noel-kyniem.jpg";
+import hocbai from "../assets/hocbai-kyniem.jpg";
+import totnghiep from "../assets/totnghiep-kyniem.jpg";
+import badongnen from "../assets/badong-nen.jpg";
 
 function SectionGallery() {
     const navigate = useNavigate();
@@ -28,7 +15,7 @@ function SectionGallery() {
     return (
         <section id="gallery" className="section gallery-section">
             <h2>
-                Kỷ niệm <br /> của chúng mình <br />👇
+                Một vài kỷ niệm <br />👇
             </h2>
 
             <div className="gallery">
@@ -39,14 +26,24 @@ function SectionGallery() {
                     onClick={() => handleClick("image", 1)}
                 />
                 <img
-                    src="/love2.jpg"
+                    src={hocbai}
                     alt="Memory 2"
                     onClick={() => handleClick("image", 2)}
                 />
-
+                <img
+                    src={totnghiep}
+                    alt="Memory 3"
+                    onClick={() => handleClick("image", 3)}
+                />
+                <img
+                    src={badongnen}
+                    alt="Memory video"
+                    onClick={() => handleClick("video", 1)}
+                    className="video-thumbnail"
+                />
                 {/* Video */}
                 <video
-                    src="/lovevideo1.mp4"
+                    src={badongnen}
                     onClick={() => handleClick("video", 1)}
                     muted
                     autoPlay
@@ -57,7 +54,6 @@ function SectionGallery() {
             <p>
                 Mỗi bức ảnh, mỗi video là một kỷ niệm, một câu chuyện, và là bằng chứng
                 cho tình yêu của chúng ta 💑
->>>>>>> a51b743 (update)
             </p>
         </section>
     );

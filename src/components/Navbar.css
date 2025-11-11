@@ -1,40 +1,16 @@
 /* Navbar chung */
 .navbar {
     position: sticky;
-<<<<<<< HEAD
-    /* hoặc fixed */
-    top: 0;
-    /* dính ở trên cùng */
-
-    width: 100%;
-    height: 60px;
-    background: rgba(255, 192, 203, 0.9);
-=======
     top: 0;
     width: 100%;
     height: 60px;
     background: rgba(255, 192, 203, 0.9);
-    /* hồng nhẹ */
->>>>>>> a51b743 (update)
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-<<<<<<< HEAD
-    /* font mặc định menu */
-}
-
-/* Logo */
-.logo {
-    font-family: 'Dancing Script', cursive;
-    /* font lãng mạn */
-    font-size: 1.8rem;
-    font-weight: 700;
-    /* đậm */
-    color: white;
-=======
     z-index: 1000;
 }
 
@@ -52,32 +28,14 @@
 .logo:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
->>>>>>> a51b743 (update)
 }
 
 /* Hamburger icon */
 .hamburger {
-<<<<<<< HEAD
-
-    display: none;
-    /* ẩn desktop */
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff;
-    border-radius: 2px;
-=======
     color: #ffffff;
     display: none;
-    /* ẩn desktop */
     cursor: pointer;
     font-size: 1.5rem;
->>>>>>> a51b743 (update)
 }
 
 /* Menu trung tâm */
@@ -89,10 +47,6 @@
 .nav-links {
     display: flex;
     gap: 60px;
-<<<<<<< HEAD
-    /* khoảng cách rộng desktop */
-=======
->>>>>>> a51b743 (update)
     list-style: none;
     margin: 0;
     padding: 0;
@@ -102,29 +56,6 @@
 .nav-links li {
     position: relative;
     padding: 8px 20px;
-<<<<<<< HEAD
-    /* tạo khoảng trống cho viền */
-    border-radius: 5px;
-    /* bo góc */
-    color: white;
-    /* chữ mặc định */
-    cursor: pointer;
-    font-weight: 600;
-    /* chữ đậm */
-    transition: all 0.3s ease;
-    /* mượt mọi hiệu ứng */
-    border: 2px solid transparent;
-    /* viền mặc định trong suốt */
-    background-color: transparent;
-    /* nền mặc định */
-}
-
-/* Hover nhẹ nhàng */
-.nav-links li:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    /* nền trắng mờ */
-
-=======
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -137,7 +68,6 @@
 /* Hover nhẹ */
 .nav-links li:hover {
     background-color: rgba(255, 255, 255, 0.15);
->>>>>>> a51b743 (update)
 }
 
 /* Underline animation */
@@ -159,55 +89,33 @@
 /* --- Mobile --- */
 @media screen and (max-width: 768px) {
     .hamburger {
-<<<<<<< HEAD
-        display: flex;
-=======
         display: block;
->>>>>>> a51b743 (update)
     }
 
     .nav-center {
         position: absolute;
         top: 60px;
-<<<<<<< HEAD
-        right: 0px;
-        background: rgba(255, 192, 203, 0.95);
-=======
         right: 0;
         background: rgba(255, 192, 203, 0.6);
         backdrop-filter: blur(8px);
-        /* mờ mềm */
->>>>>>> a51b743 (update)
         flex-direction: column;
         gap: 10px;
         padding: 0 20px;
         border-radius: 8px;
         overflow: hidden;
         max-height: 0;
-<<<<<<< HEAD
-        transition: max-height 0.3s ease, padding 0.3s ease;
-=======
         transition: max-height 0.3s ease, padding 0.3s ease, background 0.3s ease;
->>>>>>> a51b743 (update)
         z-index: 1000;
     }
 
     .nav-center.open {
         max-height: 500px;
         padding: 15px 20px;
-<<<<<<< HEAD
-=======
         background: rgba(255, 192, 203, 0.8);
-        /* hồng mờ hơn khi mở */
->>>>>>> a51b743 (update)
     }
 
     .nav-links {
         flex-direction: column;
         gap: 15px;
-<<<<<<< HEAD
-        /* link mobile hơi xa nhau */
-=======
->>>>>>> a51b743 (update)
     }
 }

@@ -7,11 +7,9 @@ function LoginPage({ onLoginSuccess }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-<<<<<<< HEAD
-        if (password === "191224") {
-=======
+
+
         if (password === "191223") {
->>>>>>> a51b743 (update)
             onLoginSuccess();
         } else {
             setError("Sai mật khẩu rồi, thử lại đi nhe!");

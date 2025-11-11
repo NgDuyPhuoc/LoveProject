@@ -7,13 +7,21 @@
 /* Ảnh và video */
 .gallery-detail img,
 .gallery-detail video {
-    width: 100%;
-    max-width: 600px;
+    width: 75%;
+    max-width: 500px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
     margin-top: 40px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     transition: transform 0.3s ease;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* ép tỉ lệ vuông */
+    object-fit: cover;
+    /* tự cắt phần dư cho đẹp */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+    margin-top: 20px;
 }
 
 .gallery-detail img:hover,
@@ -23,10 +31,16 @@
 
 /* Lời nhắn */
 .gallery-detail p {
+
+    width: 60%;
     font-size: 18px;
     color: #333;
     line-height: 1.6;
     padding: 0 10px;
+    margin: 20px auto;
+    /* căn giữa */
+    text-align: center;
+    /* căn giữa nội dung */
 }
 
 /* Nút quay lại */
@@ -44,6 +58,23 @@
     background-color: #ffb6c1;
     transform: scale(1.05);
 }
+
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-thumbnail::after {
+    content: "▶";
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 10px black;
+}
+
 
 /* --- Hiệu ứng mờ dần khi vào --- */
 @keyframes fadeIn {
@@ -68,13 +99,15 @@
 
     .gallery-detail img,
     .gallery-detail video {
-        width: 80%;
+        width: 75%;
         max-width: 100%;
         margin-top: 20px;
         border-radius: 12px;
     }
 
     .gallery-detail p {
+        width: 80%;
+        /* vừa khung điện thoại */
         font-size: 16px;
     }
 
@@ -89,6 +122,10 @@
 
     .gallery-detail img,
     .gallery-detail video {
-        max-width: 80%;
+        max-width: 75%;
+    }
+
+    .gallery-detail p {
+        width: 70%;
     }
 }

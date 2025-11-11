@@ -1,25 +1,35 @@
 import { useParams, useNavigate } from "react-router-dom";
 import "./GalleryDetail.css";
 import noel from "../assets/noel-kyniem.jpg";
+import hocbai from "../assets/hocbai-kyniem.jpg";
+import totnghiep from "../assets/totnghiep-kyniem.jpg";
+import badong from "../assets/badong.mp4";
+import badong2 from "../assets/badong2.mp4";
 
 const items = {
     image: [
         {
             id: 1,
             src: noel,
-            message: "Khoảnh khắc đầu tiên anh nhìn em và biết rằng tim mình đã lỡ nhịp 💞",
+            message: "Bức này là bữa đầu tiên anh đi chơi Noel với em nè hehe. Lúc đó là anh bắt đầu để ý em rồi nên mới lấy hết can đảm rủ em đi chơi Noel đó. Anh còn nhớ rõ luôn, hôm đó anh lấy 200 ngàn tiền lẻ mà anh để dành (toàn tờ 10k với 5k), rồi 5h30 chiều anh đi bộ từ nhà tới nhà Thịnh để đổi đóng tiền lẻ đó thành hai tờ 100 ngàn, chỉ để có tiền đi chơi với em. Nhớ lại vừa vui vừa mắc cười á, mà tiếc cái là hôm đó không có bắp nướng cho em gặm được =))",
         },
         {
             id: 2,
-            src: "/love2.jpg",
-            message: "Ngày hôm ấy, nụ cười của em làm anh nhớ mãi không quên ☀️",
+            src: hocbai,
+            message: "Khoảng thời gian này anh nhớ rõ lắm, lúc đó anh đang trong giai đoạn try hard dữ dội luôn, kiểu như quyết tâm thay đổi bản thân vậy đó. Trước đó anh học Toán tệ lắm, nhưng lên lớp 12 thì như con nhộng cố phá kén để trở thành phiên bản tốt hơn của chính mình. May sao em lúc đó cũng hơi khớp với môn Toán, nên anh có dịp được chỉ bài cho em, rồi tiện thể giảng thêm vài ngữ pháp Tiếng Anh nữa hehe. Anh còn nhớ hôm đó anh cúp tiết học thêm Lý để vô quán cà phê học với em, cảm giác nó vừa ngây ngô, vừa dễ thương. Kết quả từ sự nỗ lực của bản thân cộng với 1 phần do may mắn mà điểm Toán tốt nghiệp của anh được 8.3 tự hào khoe với ba mẹ vì được top 3 ở trường",
         },
+        {
+            id: 3,
+            src: totnghiep,
+            message: "Nếu được dùng hai từ để nói về tình yêu của chúng mình, thì anh sẽ chọn “Thanh Xuân”. Vì anh gặp em vào năm 17 tuổi, cái tuổi đẹp nhất, hồn nhiên nhất của tình yêu. Ở tuổi đó, mọi thứ đều giản đơn, không toan tính, không phức tạp, chỉ cần một ánh mắt, một nụ cười hay một khoảnh khắc thoáng qua thôi cũng đủ khiến trái tim cả hai đều rung động"
+        },
+
     ],
     video: [
         {
             id: 1,
-            src: "/lovevideo1.mp4",
-            message: "Khoảnh khắc em cười trong video này làm tim anh tan chảy ❤️",
+            src: badong2, // 👉 trỏ tới video thật
+            message: "Khoảnh khắc dễ thương khi hai đứa cùng nhau đi Bà Động 💕",
         },
     ],
 };
@@ -37,7 +47,7 @@ function GalleryDetail() {
             {type === "image" ? (
                 <img src={item.src} alt={`Memory ${id}`} />
             ) : (
-                <video src={item.src} controls autoPlay />
+                <video src={item.src} controls />
             )}
 
             <p>{item.message}</p>

@@ -5,12 +5,9 @@
   "dependencies": {
     "@fontsource/dancing-script": "^5.2.8",
     "@fontsource/poppins": "^5.2.7",
-<<<<<<< HEAD
-=======
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.0",
->>>>>>> a51b743 (update)
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
