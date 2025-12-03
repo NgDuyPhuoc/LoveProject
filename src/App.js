@@ -8,6 +8,7 @@ import GalleryDetail from "./components/GalleryDetail";
 import LoginPage from "./pages/LoginPage";
 import "./App.css";
 
+
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
 
