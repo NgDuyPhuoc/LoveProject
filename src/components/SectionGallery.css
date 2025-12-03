@@ -23,16 +23,50 @@
     gap: 20px;
 }
 
+/* Ảnh và thumbnail video */
 .gallery img {
     width: 250px;
     height: 250px;
+    /* luôn vuông */
     object-fit: cover;
+    /* cắt vừa khung, không méo */
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Hover effect */
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Thumbnail video với nút play */
+.video-thumbnail {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    /* để nút play không bị tràn */
+}
+
+.video-thumbnail::after {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    /* kích thước lớn hơn */
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, color 0.3s;
+    pointer-events: none;
+    /* để click vẫn vào ảnh */
+}
+
+/* Hiệu ứng hover: phóng to và nổi bật */
+.video-thumbnail:hover::after {
+    transform: translate(-50%, -50%) scale(1.2);
+    color: rgba(255, 255, 255, 1);
 }

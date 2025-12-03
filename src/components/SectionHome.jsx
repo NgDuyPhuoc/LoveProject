@@ -36,7 +36,7 @@ function SectionHome() {
                     cấp 2, cấp 3 anh chưa từng nghĩ mình làm được. Và giờ đây, anh là một
                     sinh viên năm 2 ngành Công nghệ Thông tin, học tập cũng không đến nỗi
                     tệ. Cảm ơn em đã đến bên anh, khiến anh trở nên tốt hơn và hoàn thiện
-                    hơn từng ngày 🥰.
+                    hơn từng ngày.
                 </p>
             </div>
         </section>

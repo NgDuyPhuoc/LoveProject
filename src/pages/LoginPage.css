@@ -1,74 +1,188 @@
+/* =============== NỀN =============== */
 .login-container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ffb3c1, #ff758f);
+
+    background: linear-gradient(135deg, #ff9eb3, #ffb8d2, #ffcce1);
+    background-size: 300% 300%;
+    animation: backgroundMove 12s ease infinite;
+
     font-family: "Poppins", sans-serif;
     padding: 20px;
 }
 
+/* =============== KHUNG LOGIN (GLASS ULTRA) =============== */
 .login-box {
     width: 400px;
     max-width: 100%;
     padding: 40px;
-    border-radius: 20px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.35), rgba(255, 192, 203, 0.25));
-    backdrop-filter: blur(15px);
+
+    /* GLASS EFFECT */
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+
+    border-radius: 25px;
+
+    /* VIỀN KÍNH NEON */
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+
+    /* ĐỔ BÓNG HỒNG */
+    box-shadow:
+        0 0 35px rgba(255, 100, 150, 0.35),
+        inset 0 0 15px rgba(255, 255, 255, 0.25);
+
     text-align: center;
     color: #fff;
-    box-shadow: 0 0 25px rgba(255, 105, 180, 0.6), 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+
+    animation: fadeIn 0.7s ease both;
 }
 
+/* =============== TIÊU ĐỀ =============== */
+.login-box h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 0 12px rgba(255, 200, 220, 0.7);
+}
+
+/* =============== INPUT + BUTTON =============== */
 .login-box input,
 .login-box button {
     width: 100%;
     padding: 12px 15px;
     margin-bottom: 15px;
-    border-radius: 12px;
+    border-radius: 14px;
     border: none;
     font-size: 1rem;
     outline: none;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+    transition: 0.25s ease;
 }
 
+/* INPUT GLASS */
 .login-box input {
-    background-color: rgba(255, 255, 255, 0.2);
+    width: 90%;
+    background: rgba(255, 255, 255, 0.28);
     color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.25);
 }
 
 .login-box input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .login-box input:focus {
-    background-color: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 0 10px rgba(255, 192, 203, 0.6);
+    background: rgba(255, 255, 255, 0.38);
+    box-shadow:
+        0 0 12px rgba(255, 170, 200, 0.9),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+
+    transform: scale(1.02);
 }
 
+/* BUTTON CHÍNH */
 .login-box button {
-    background-color: #ff4d6d;
+    background: linear-gradient(135deg, #ff4d6d, #ff1e56);
     color: #fff;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
+    box-shadow:
+        0 3px 15px rgba(255, 50, 100, 0.5),
+        inset 0 0 12px rgba(255, 190, 210, 0.4);
 }
 
 .login-box button:hover {
-    background-color: #ff1e56;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow:
+        0 5px 18px rgba(255, 60, 110, 0.6),
+        inset 0 0 16px rgba(255, 200, 220, 0.5);
 }
 
+/* =============== LỖI =============== */
 .error {
-    color: #ffd6e0;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    color: #ffe3ec;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
 }
 
-/* Mobile responsive */
+/* =============== BUTTON GỢI Ý (GLASS MINI) =============== */
+.hint-button {
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.hint-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.05);
+}
+
+/* =============== CARD GỢI Ý (GLASS SOFT) =============== */
+.hint-card {
+    margin-top: 15px;
+    padding: 15px;
+
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow: 0 0 15px rgba(255, 150, 180, 0.35);
+    animation: slideUp 0.4s ease both;
+}
+
+/* =============== ANIMATION =============== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* =============== MOBILE =============== */
 @media (max-width: 480px) {
     .login-box {
-        padding: 30px 20px;
+        padding: 30px 22px;
     }
 
     .login-box h2 {

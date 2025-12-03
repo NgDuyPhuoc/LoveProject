@@ -4,6 +4,8 @@ import noel from "../assets/noel-kyniem.jpg";
 import hocbai from "../assets/hocbai-kyniem.jpg";
 import totnghiep from "../assets/totnghiep-kyniem.jpg";
 import badongnen from "../assets/badong-nen.jpg";
+import date from "../assets/date.jpg";
+
 
 function SectionGallery() {
     const navigate = useNavigate();
@@ -35,26 +37,26 @@ function SectionGallery() {
                     alt="Memory 3"
                     onClick={() => handleClick("image", 3)}
                 />
+
+                {/* Video thumbnails */}
                 <img
                     src={badongnen}
-                    alt="Memory video"
+                    alt="Memory video 1"
                     onClick={() => handleClick("video", 1)}
                     className="video-thumbnail"
                 />
-                {/* Video */}
-                <video
-                    src={badongnen}
-                    onClick={() => handleClick("video", 1)}
-                    muted
-                    autoPlay
-                    loop
+                <img
+                    src={date}
+                    alt="Memory video 2"
+                    onClick={() => handleClick("video", 2)}
+                    className="video-thumbnail"
                 />
             </div>
 
-            <p>
+            <h3>
                 Mỗi bức ảnh, mỗi video là một kỷ niệm, một câu chuyện, và là bằng chứng
-                cho tình yêu của chúng ta 💑
-            </p>
+                cho tình yêu của chúng ta! 💑
+            </h3>
         </section>
     );
 }
