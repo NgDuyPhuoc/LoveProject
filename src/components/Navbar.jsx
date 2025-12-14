@@ -29,9 +29,9 @@ function Navbar() {
             {/* Menu chính */}
             <div className={`nav-center ${isOpen ? "open" : ""}`}>
                 <ul className="nav-links">
-                    <li onClick={() => scrollToSection("home")}>Mở đầu</li>
-                    <li onClick={() => scrollToSection("gallery")}>Kỷ niệm</li>
-                    <li onClick={() => scrollToSection("ending")}>Kết thúc</li>
+                    <li onClick={() => scrollToSection("home")}>Gặp nhau</li>
+                    <li onClick={() => scrollToSection("gallery")}>Cùng nhau</li>
+                    <li onClick={() => scrollToSection("ending")}>Mãi sau này</li>
                 </ul>
             </div>
 

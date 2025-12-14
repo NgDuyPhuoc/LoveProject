@@ -1,29 +1,155 @@
-.section {
-    min-height: 100vh;
-    padding: 120px 20px 80px 20px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth;
-}
-
+/* ===== ENDING SECTION ===== */
 .ending-section {
-    background: linear-gradient(135deg, #ffb3c1, #ff758f);
-    color: white;
+    min-height: 100vh;
+    background: #ffcfe2;
+    color: #ff4d6d;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 64px 20px;
+    text-align: center;
 }
 
-.ending-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+/* ===== CARD ẢNH ===== */
+.ending-card {
+    margin-bottom: 52px;
 }
 
-.ending-section p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    line-height: 1.5;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+.ending-card p {
+    font-size: 1.0rem;
+    line-height: 1.6;
+    max-width: 500px;
+    color: black;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+}
+
+.ending-card img {
+    width: min(320px, 92vw);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* ===== LOVE LETTER ===== */
+.love-letter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ===== ENVELOPE ===== */
+.envelope {
+    width: min(260px, 80vw);
+    height: 160px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+    transform: scale(1.05);
+}
+
+.envelope-body {
+    width: 100%;
+    height: 100%;
+    background: #ffe0ef;
+    border: 2px solid #ffb6d9;
+    border-radius: 12px;
+}
+
+.envelope-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #ffb6d9;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    border-radius: 12px 12px 0 0;
+}
+
+.click-text {
+    margin-top: 10px;
+    color: #d63384;
+    font-size: 15px;
+}
+
+/* ===== PAPER ===== */
+.paper {
+    width: min(280px, 92vw);
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 20px;
+    border: 2px solid #ffd6e8;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.paper h3 {
+    color: #d63384;
+    margin-bottom: 14px;
+}
+
+/* ===== IMAGE TRONG THƯ ===== */
+.letter-image {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+/* ===== HEART ===== */
+.heart-icon {
+    width: clamp(42px, 8vw, 56px);
+    margin: 10px auto 14px;
+    animation: heartbeat 1.4s infinite ease-in-out;
+}
+
+/* ===== MESSAGE ===== */
+.letter-message {
+    font-size: 1.0rem;
+    line-height: 1.6;
+    max-width: 500px;
+    color: black;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.25);
+    }
+}
+
+/* ===== MOBILE NHỎ ===== */
+@media (max-width: 360px) {
+    .paper {
+        padding: 18px;
+    }
+
+    .ending-section {
+        padding: 50px 14px;
+    }
 }
