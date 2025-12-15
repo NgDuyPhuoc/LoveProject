@@ -60,7 +60,7 @@ function GalleryDetail() {
 
             <div>
                 <button onClick={() => navigate(-1)} className="back-btn">
-                    ⬅ Quay lại
+                    Quay lại
                 </button>
             </div>
         </div>

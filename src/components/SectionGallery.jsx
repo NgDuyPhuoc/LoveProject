@@ -17,7 +17,7 @@ function SectionGallery() {
     return (
         <section id="gallery" className="section gallery-section">
             <h2>
-                Một vài kỷ niệm <br />👇
+                Kỷ niệm đáng nhớ <br />👇
             </h2>
 
             <div className="gallery">
@@ -54,8 +54,7 @@ function SectionGallery() {
             </div>
 
             <h3>
-                Mỗi bức ảnh, mỗi video là một kỷ niệm, một câu chuyện, và là bằng chứng
-                cho tình yêu của chúng ta! 💑
+                Mỗi bức ảnh, mỗi video là một kỷ niệm, một câu chuyện, một khoảnh khắc đáng nhớ!
             </h3>
         </section>
     );
